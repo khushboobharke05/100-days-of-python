@@ -1,0 +1,37 @@
+print('''
+                                                                         
+  ,d                                                                       
+  88                                                                       
+MM88MMM 8b,dPPYba,  ,adPPYba, ,adPPYYba, ,adPPYba, 88       88 8b,dPPYba,  
+  88    88P'   "Y8 a8P_____88 ""     `Y8 I8[    "" 88       88 88P'   "Y8  
+  88    88         8PP""""""" ,adPPPPP88  `"Y8ba,  88       88 88          
+  88,   88         "8b,   ,aa 88,    ,88 aa    ]8I "8a,   ,a88 88          
+  "Y888 88          `"Ybbd8"' `"8bbdP"Y8 `"YbbdP"'  `"YbbdP'Y8 88          
+                                                                      ''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+Choice1  = input('You\'re at a cross road. Where do you want to go? '
+                 'Type "left" or "right" \n').lower() # to change anything written into lower
+# \ is used as escape symbol use single quote if you want to double quote inside the string to be represented
+if Choice1 == "left":
+    Choice2 = input('You\'ve come to a lake. '
+                    'There is an island in the middle of the lake. '
+                    'Type "wait" to wait for a boat. '
+                    'Type "swim" to swim across. ' ).lower()
+    if Choice2 == "wait":
+        Choice3 = input('You arrive at the island unharmed. '
+                        'There is a house with 3 doors.'
+                        'One "red", one "yellow" and one "blue".'
+                        ' Which colour do you choose?')
+        if Choice3 == "red":
+            print("Burned by fire.Game over")
+        elif Choice3 == "yellow":
+            print("You win")
+        elif Choice3 == "blue":
+            print("Eaten by beasts.Game over")
+        else:
+            print("The door does not exit ")
+    else:
+        print("Attacked by trout.Game over")
+else:
+    print("Fall into a hole.Game over")
